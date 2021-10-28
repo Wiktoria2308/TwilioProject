@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twilio</title>
+ <style>
+   @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-family: "Fjalla One", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact-us {
+  display: block;
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px rgb(229, 33, 54), 15px 15px 1px 2px black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 14pt;
+  line-height: 28pt;
+  margin-bottom: 28pt;
+  border: none;
+  border-bottom: 5px solid black;
+  background: #f8f4e5;
+  min-width: 250px;
+  padding-left: 5px;
+  outline: none;
+  color: black;
+}
+
+button {
+  font-size: 14pt;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  line-height: 28pt;
+  padding: 0 40px;
+  background: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 3px 3px 1px rgb(229, 33, 54), 3px 3px 1px 1px black;
+}
+textarea {
+  border: 5px solid black;
+  font-size: 12pt;
+}
+
+label {
+  font-size: 16pt;
+  line-height: 28pt;
+  letter-spacing: 1px;
+  display: block;
+}
+ </style>
+</head>
+<body>
+
+<div class="contact-us">
+
+  <h1>Send an email with Twilio</h1>
+
+  <form method='GET' action="/sendemail">
+    <label for="customer_name">Name</label>
+    <input type="text" placeholder="Name" id="customer_name" name="customer_name" required>
+    <label for="customer_email">Email</label>
+    <input type="email" placeholder="Email" id="customer_email" name="email" required>
+    <label for="subject">Subject</label>
+    <input type="text" placeholder="Subject" id="subject" name="subject">
+    <label for="customer_message">Message</label>
+    <textarea name="message" id="customer_message" cols="40" rows="10" required></textarea>
+    <button type="submit" value="submit">Send</button>
+  </form>
+</div>
+</body>
+</html>
