@@ -2,7 +2,7 @@ const express = require('express');
 
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 //use the application off of express.
 let app = express();
