@@ -4,10 +4,8 @@ const sgMail = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-//use the application off of express.
 let app = express();
 
-//define the route for "/"
 app.get('/', function (request, response) {
   response.sendFile(__dirname + '/index.html');
 });
